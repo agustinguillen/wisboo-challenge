@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+$mainGrey: #E5E5E5;
+$magenta: rgba(253, 0, 135, 1);
+$linkBlue: rgba(4, 178, 243, 1);
+// pills colors
+$green: rgba(23, 230, 138, 0.3);
+$pink: rgba(255, 69, 92, 0.4);
+$grey: rgba(236, 238, 241, 1);
+$blue: rgba(4, 178, 243, 0.3);
+// text colors
+$mainText: rgba(34, 34, 50, 1);
+$secondaryText: rgba(105, 114, 132, 1);
+$tertiaryText: rgba(157, 165, 183, 1);
+$placeholderText: rgba(212, 216, 225, 1);
+
+$open-sans: 'Open Sans', sans-serif;
+
+.container {
+    background-color: $mainGrey;
+    font-family: $open-sans;
+}
