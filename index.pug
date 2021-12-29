@@ -47,3 +47,31 @@ html(lang="en")
                         text(class="totals__results") 257000 ARS
                     small 04/10/2020 - 04/12/2020
             div(class="wrapper results")
+                span(class="results__filters")
+                    input(
+                        class="results__filter results__filter__search"
+                        type="text"
+                        placeholder="Buscar por # orden o comprador"
+                    )    
+                    select(name="select" class="results__filter results__filter__select")
+                        option(value="default" selected) Curso 
+                    select(name="select" class="results__filter results__filter__select")
+                        option(value="default" selected) Estado
+                    select(name="select" class="results__filter results__filter__select")
+                        option(value="default" selected) Medio de pago
+                    input(type="date" class="results__filter results__filter__date")
+                span(class="results__filters__mobile")
+                    input(
+                        class="results__filter results__filter__search"
+                        type="text"
+                        placeholder="Buscar por # orden o comprador"
+                    )
+                    select(name="select" class="results__filter results__filter__select")
+                        option(value="default" selected) Tipo de filtro
+                        option(value="course") Curso
+                        option(value="state") Estado
+                        option(value="payment") Medio de pago
+                    select(name="select" class="results__filter results__filter__select")
+                        option(value="default" selected) Opciones
+                    input(type="date" class="results__filter results__filter__date")
+                    
