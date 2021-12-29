@@ -47,7 +47,7 @@ html(lang="en")
                         text(class="totals__results") 257000 ARS
                     small 04/10/2020 - 04/12/2020
             div(class="wrapper results")
-                span(class="results__filters")
+                div(class="results__filters")
                     input(
                         class="results__filter results__filter__search"
                         type="text"
@@ -60,7 +60,7 @@ html(lang="en")
                     select(name="select" class="results__filter results__filter__select")
                         option(value="default" selected) Medio de pago
                     input(type="date" class="results__filter results__filter__date")
-                span(class="results__filters__mobile")
+                div(class="results__filters__mobile")
                     input(
                         class="results__filter results__filter__search"
                         type="text"
@@ -74,4 +74,39 @@ html(lang="en")
                     select(name="select" class="results__filter results__filter__select")
                         option(value="default" selected) Opciones
                     input(type="date" class="results__filter results__filter__date")
+                div(class="results__info")
+                    div(class="results__column-titles")
+                        span(class="results__column-title")
+                            text # Orden
+                            i(class="icon-Filtrar")
+                        span(class="results__column-title results__column-title__course")
+                            text # Curso
+                            i(class="icon-Filtrar")
+                        span(class="results__column-title results__column-title__customer")
+                            text Comprador
+                            i(class="icon-Filtrar")
+                        span(class="results__column-title")
+                            text Fecha
+                            i(class="icon-Filtrar")
+                        span(class="results__column-title")
+                            text Estado
+                            i(class="icon-Filtrar")
+                        span(class="results__column-title")
+                            text Ganancias
+                            i(class="icon-Filtrar")
+                    div(class="results__items")
+                        span(class="results__item")
+                            span(style="width: 15%")
+                                a 10063-0021
+                            span(style="width: 26%")
+                                text(class="results__item-text") Baby Monitor Technology
+                            span(style="width: 18%")
+                                text(class="results__item-text") Aaron Almaraz
+                            span(style="width: 14%")
+                                text(class="results__item-text") 19 Dec 2020
+                            span(style="width: 14%")
+                                span(class="results__item-state results__item-state__voucher") Comprobante
+                            span(style="width: 14%")
+                                text(class="results__item-text") USD $50
+                
                     

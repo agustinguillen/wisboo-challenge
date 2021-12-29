@@ -23,7 +23,8 @@
             <text class="totals__results">10420 USD</text></span><small>Todos los tiempos</small></span><span class="totals__box">
           <text class="totals__title">Recaudo (ARS)</text><span><i class="icon-Dollar-Sign"></i>
             <text class="totals__results">257000 ARS</text></span><small>04/10/2020 - 04/12/2020</small></span></div>
-      <div class="wrapper results"><span class="results__filters">
+      <div class="wrapper results">
+        <div class="results__filters">
           <input class="results__filter results__filter__search" type="text" placeholder="Buscar por # orden o comprador">
           <select class="results__filter results__filter__select" name="select">
             <option value="default" selected>Curso </option>
@@ -34,7 +35,9 @@
           <select class="results__filter results__filter__select" name="select">
             <option value="default" selected>Medio de pago</option>
           </select>
-          <input class="results__filter results__filter__date" type="date"></span><span class="results__filters__mobile">
+          <input class="results__filter results__filter__date" type="date">
+        </div>
+        <div class="results__filters__mobile">
           <input class="results__filter results__filter__search" type="text" placeholder="Buscar por # orden o comprador">
           <select class="results__filter results__filter__select" name="select">
             <option value="default" selected>Tipo de filtro</option>
@@ -45,7 +48,23 @@
           <select class="results__filter results__filter__select" name="select">
             <option value="default" selected>Opciones</option>
           </select>
-          <input class="results__filter results__filter__date" type="date"></span></div>
+          <input class="results__filter results__filter__date" type="date">
+        </div>
+        <div class="results__info">
+          <div class="results__column-titles"><span class="results__column-title">
+              <text># Orden</text><i class="icon-Filtrar"></i></span><span class="results__column-title results__column-title__course">
+              <text># Curso</text><i class="icon-Filtrar"></i></span><span class="results__column-title results__column-title__customer">
+              <text>Comprador</text><i class="icon-Filtrar"></i></span><span class="results__column-title">
+              <text>Fecha</text><i class="icon-Filtrar"></i></span><span class="results__column-title">
+              <text>Estado</text><i class="icon-Filtrar"></i></span><span class="results__column-title">
+              <text>Ganancias</text><i class="icon-Filtrar"></i></span></div>
+          <div class="results__items"><span class="results__item"><span style="width: 15%"><a>10063-0021</a></span><span style="width: 26%">
+                <text class="results__item-text">Baby Monitor Technology</text></span><span style="width: 18%">
+                <text class="results__item-text">Aaron Almaraz</text></span><span style="width: 14%">
+                <text class="results__item-text">19 Dec 2020</text></span><span style="width: 14%"><span class="results__item-state results__item-state__voucher">Comprobante</span></span><span style="width: 14%">
+                <text class="results__item-text">USD $50</text></span></span></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

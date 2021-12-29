@@ -198,9 +198,10 @@ body {
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
       height: fit-content;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       .results__filters {
-        width: 100%;
+        width: 96%;
         padding: 2%;
         display: flex;
         justify-content: space-between;
@@ -250,6 +251,74 @@ body {
           width: 100%;
           &::-webkit-calendar-picker-indicator {
             filter: invert(0.5);
+          }
+        }
+      }
+      .results__info {
+        width: 94%;
+        padding: 0 3% 1% 3%;
+        .results__column-titles {
+          display: flex;
+          justify-content: space-between;
+          .results__column-title {
+            width: 14%;
+            text {
+              margin-right: 10px;
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 13px;
+              line-height: 18px;
+              color: $secondary-text;
+            }
+            i {
+              font-size: 13px;
+              line-height: 18px;
+            }
+          }
+          .results__column-title__course {
+            width: 26%;
+          }
+          .results__column-title__customer {
+            width: 18%;
+          }
+        }
+      }
+      .results__items {
+        width: 100%;
+        .results__item {
+          display: flex;
+          justify-content: space-between;
+          span {
+            a {
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 20px;
+              text-decoration-line: underline;
+              color: $link-blue;
+            }
+            .results__item-text {
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 15px;
+              line-height: 20px;
+              color: $secondary-text;
+            }
+            .results__item-state {
+              width: 14%;
+              border: 2px solid #FFFFFF;
+              border-radius: 10px;
+              font-family: 'Open Sans';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 13px;
+              line-height: 18px;
+              text-align: center;
+              color: $main-text;
+            }
           }
         }
       }
