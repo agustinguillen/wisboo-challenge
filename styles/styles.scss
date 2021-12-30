@@ -12,7 +12,9 @@ $blue: rgba(4, 178, 243, 0.3);
 $main-text: rgba(34, 34, 50, 1);
 $secondary-text: rgba(105, 114, 132, 1);
 $tertiary-text: rgba(157, 165, 183, 1);
+//other
 $soft-grey: rgba(212, 216, 225, 1);
+$icon-grey: rgba(179, 186, 201, 1);
 
 $open-sans: "Open Sans", sans-serif;
 
@@ -47,9 +49,6 @@ body {
       padding: 1rem 0;
       .header__titles {
         width: 70%;
-        @media screen and (max-width: "768px") {
-          width: 100%;
-        }
         h2 {
           font-style: normal;
           font-weight: bold;
@@ -64,11 +63,6 @@ body {
         display: flex;
         justify-content: end;
         align-items: center;
-        @media screen and (max-width: "768px") {
-          width: 100%;
-          max-width: 80vw;
-          justify-content: start;
-        }
         button {
           height: 2.2rem;
           margin-top: 1rem;
@@ -84,10 +78,6 @@ body {
           text-transform: uppercase;
           color: #697284;
           cursor: pointer;
-          @media screen and (max-width: "768px") {
-            height: 2rem;
-            padding: 0.3rem;
-          }
         }
         .header__buttons__download {
           i {
@@ -159,34 +149,6 @@ body {
           font-weight: 600;
           font-size: 13px;
           line-height: 18px;
-        }
-        @media screen and (max-width: "768px") {
-          padding: 0.8rem;
-          width: 47%;
-          height: 7rem;
-          display: grid;
-          grid-template-rows: 3;
-        }
-        @media screen and (max-width: "576px") {
-          padding: 0.5rem;
-          .totals__title {
-            grid-row: 1;
-          }
-          i {
-            font-size: 15px;
-            font-weight: 600;
-            grid-row: 2;
-          }
-          .totals__results {
-            font-size: 15px;
-            font-weight: 600;
-            grid-row: 2;
-          }
-          small {
-            grid-row: 3;
-            font-size: 10px;
-            white-space: nowrap;
-          }
         }
       }
     }
@@ -285,68 +247,113 @@ body {
             width: 18%;
           }
         }
-      }
-      .results__items {
-        width: 100%;
-        .results__item {
-          display: flex;
-          justify-content: space-between;
-          padding: 1.5% 0;
-          border: 0.7px $soft-grey;
-          border-style: solid none;
-          height: 30px;
-          span {
-            a {
-              font-family: 'Open Sans';
-              font-style: normal;
-              font-weight: 600;
-              font-size: 15px;
-              line-height: 20px;
-              text-decoration-line: underline;
-              color: $link-blue;
+        .results__items {
+          width: 100%;
+          .results__item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5% 0;
+            border: 0.7px $soft-grey;
+            border-style: solid none;
+            height: 30px;
+            .results__column-wrapper {
+              width: 14%;
+              a {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 20px;
+                text-decoration-line: underline;
+                color: $link-blue;
+              }
+              .results__item-text {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 15px;
+                line-height: 20px;
+                color: $secondary-text;
+              }
+              .results__course-title-wrapper {
+                width: 70%;
+                display: flex;  
+              }
+              .results__item-state {
+                width: 106px;
+                border: 2px solid #FFFFFF;
+                border-radius: 10px;
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 13px;
+                line-height: 18px;
+                text-align: center;
+                color: $main-text;
+                height: 20px;
+                padding: 0.5% 6%;
+              }
+              .results__item-state__voucher {
+                background-color: $blue;
+              }
+              .results__item-state__paid {
+                background-color: $green;
+              }
+              .results__item-state__pending {
+                background-color: $grey;
+              }
+              .results__item-state__rejected {
+                background-color: $red;
+              }
+              .icon-Menu-Tres-Puntos {
+                color: $icon-grey;
+                font-size: 20px;
+              }
+              .results__column-title__mobile {
+                display: none;
+              }
             }
-            .results__item-text {
-              font-family: 'Open Sans';
-              font-style: normal;
-              font-weight: normal;
-              font-size: 15px;
-              line-height: 20px;
-              color: $secondary-text;
+            .results__column-wrapper__title {
+              width: 26%;
             }
-            .results__course-title-wrapper {
-              width: 70%;
-              display: flex;  
+            .results__column-wrapper__customer {
+              width: 18%;
             }
-            .results__item-state {
-              width: 106px;
-              border: 2px solid #FFFFFF;
-              border-radius: 10px;
-              font-family: 'Open Sans';
-              font-style: normal;
-              font-weight: normal;
-              font-size: 13px;
-              line-height: 18px;
-              text-align: center;
-              color: $main-text;
-              height: 20px;
-              padding: 0.5% 6%;
+            .results__column-wrapper__profits {
+              width: 10%;
             }
-            .results__item-state__voucher {
-              background-color: $blue;
-            }
-            .results__item-state__paid {
-              background-color: $green;
-            }
-            .results__item-state__pending {
-              background-color: $grey;
-            }
-            .results__item-state__rejected {
-              background-color: $red;
+            .results__column-wrapper__icon {
+              width: 4%;
             }
           }
         }
+      }     
+    }
+    @media screen and (max-width: "768px") {
+      .header {
+        .header__titles {
+          width: 100%;
+        }
+        .header__buttons {
+          width: 100%;
+          max-width: 80vw;
+          justify-content: start;
+          button {
+            height: 2rem;
+            padding: 0.3rem;
+          }
+        }
       }
-      @media screen and (max-width: "768px") {
+      .totals {
+        .totals__box {
+          padding: 0.8rem;
+          width: 47%;
+          height: 7rem;
+          display: grid;
+          grid-template-rows: 3;
+        }
+      }
+      .results {
         .results__filters {
           display: none;
         }
@@ -355,6 +362,76 @@ body {
           justify-content: space-between;
           flex-wrap: wrap;
           padding: 1rem;
+        }
+        .results__info {
+          .results__column-titles {
+            display: none;
+          }
+          .results__items {
+            .results__item {
+              display: flex;
+              flex-wrap: wrap;
+              height: 130px;
+              justify-content: space-between;
+              .results__column-wrapper {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                a {
+                  font-size: 12px;
+                }
+                .results__item-text {
+                  font-size: 12px;
+                }
+                .results__course-title-wrapper {
+                  width: 90%;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: start;
+                }
+                .results__item-state {
+                  width: fit-content;
+                  font-size: 12px;
+                  height: 20px;
+                  padding: 0.5% 6%;
+                }
+                .icon-Menu-Tres-Puntos {
+                  display: none;
+                }
+                .results__column-title__mobile {
+                  font-size: 10px;
+                  font-weight: bold;
+                  display: block;
+                }
+              }
+            }
+          }
+        }        
+      }
+    }
+    @media screen and (max-width: "576px") {
+      .totals {
+        .totals__box {
+          padding: 0.5rem;
+          .totals__title {
+            grid-row: 1;
+          }
+          i {
+            font-size: 15px;
+            font-weight: 600;
+            grid-row: 2;
+          }
+          .totals__results {
+            font-size: 15px;
+            font-weight: 600;
+            grid-row: 2;
+          }
+          small {
+            grid-row: 3;
+            font-size: 10px;
+            white-space: nowrap;
+          }
         }
       }
     }
