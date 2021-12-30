@@ -372,6 +372,8 @@ body .container .results .results__info .results__column-titles {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1.5% 0;
+  border-bottom: 0.7px #d4d8e1 solid;
 }
 
 body .container .results .results__info .results__column-titles .results__column-title {
@@ -412,6 +414,10 @@ body .container .results .results__items .results__item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 1.5% 0;
+  border: 0.7px #d4d8e1;
+  border-style: solid none;
+  height: 30px;
 }
 
 body .container .results .results__items .results__item span a {
@@ -434,8 +440,15 @@ body .container .results .results__items .results__item span .results__item-text
   color: #697284;
 }
 
+body .container .results .results__items .results__item span .results__course-title-wrapper {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 body .container .results .results__items .results__item span .results__item-state {
-  width: 14%;
+  width: 106px;
   border: 2px solid #FFFFFF;
   border-radius: 10px;
   font-family: 'Open Sans';
@@ -445,6 +458,24 @@ body .container .results .results__items .results__item span .results__item-stat
   line-height: 18px;
   text-align: center;
   color: #222232;
+  height: 20px;
+  padding: 0.5% 6%;
+}
+
+body .container .results .results__items .results__item span .results__item-state__voucher {
+  background-color: rgba(4, 178, 243, 0.3);
+}
+
+body .container .results .results__items .results__item span .results__item-state__paid {
+  background-color: rgba(23, 230, 138, 0.3);
+}
+
+body .container .results .results__items .results__item span .results__item-state__pending {
+  background-color: #eceef1;
+}
+
+body .container .results .results__items .results__item span .results__item-state__rejected {
+  background-color: rgba(255, 69, 92, 0.4);
 }
 
 @media screen and (max-width: 768px) {

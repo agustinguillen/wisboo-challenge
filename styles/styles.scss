@@ -5,14 +5,14 @@ $magenta: rgba(253, 0, 135, 1);
 $link-blue: rgba(4, 178, 243, 1);
 // pills colors
 $green: rgba(23, 230, 138, 0.3);
-$pink: rgba(255, 69, 92, 0.4);
+$red: rgba(255, 69, 92, 0.4);
 $grey: rgba(236, 238, 241, 1);
 $blue: rgba(4, 178, 243, 0.3);
 // text colors
 $main-text: rgba(34, 34, 50, 1);
 $secondary-text: rgba(105, 114, 132, 1);
 $tertiary-text: rgba(157, 165, 183, 1);
-$placeholder-text: rgba(212, 216, 225, 1);
+$soft-grey: rgba(212, 216, 225, 1);
 
 $open-sans: "Open Sans", sans-serif;
 
@@ -74,7 +74,7 @@ body {
           margin-top: 1rem;
           padding: 0.5rem;
           background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
-          border: 1px solid #d4d8e1;
+          border: 1px solid $soft-grey;
           box-sizing: border-box;
           border-radius: 3px;
           font-style: normal;
@@ -122,7 +122,7 @@ body {
         height: auto;
         margin-bottom: 2%;
         min-height: 121px;
-        border: 1px solid #d4d8e1;
+        border: 1px solid $soft-grey;
         box-sizing: border-box;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
@@ -193,7 +193,7 @@ body {
     .results {
       margin-bottom: 2vh;
       background-color: #ffffff;
-      border: 1px solid #d4d8e1;
+      border: 1px solid $soft-grey;
       border-radius: 8px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
       height: fit-content;
@@ -207,7 +207,7 @@ body {
         justify-content: space-between;
         .results__filter {
           background: #ffffff;
-          border: 1px solid #d4d8e1;
+          border: 1px solid $soft-grey;
           box-sizing: border-box;
           border-radius: 4px;
           padding: 0.5rem;
@@ -216,7 +216,7 @@ body {
         .results__filter__search {
           width: 25%;
           &::placeholder {
-            color: $placeholder-text;
+            color: $soft-grey;
           }
         }
         .results__filter__select {
@@ -233,7 +233,7 @@ body {
         display: none;
         .results__filter {
           background: #ffffff;
-          border: 1px solid #d4d8e1;
+          border: 1px solid $soft-grey;
           box-sizing: border-box;
           border-radius: 4px;
           padding: 0.5rem;
@@ -244,7 +244,7 @@ body {
         .results__filter__search {
           width: 100%;  
           &::placeholder {
-            color: $placeholder-text;
+            color: $soft-grey;
           }
         }
         .results__filter__date {
@@ -260,6 +260,8 @@ body {
         .results__column-titles {
           display: flex;
           justify-content: space-between;
+          padding: 1.5% 0;
+          border-bottom: 0.7px $soft-grey solid;
           .results__column-title {
             width: 14%;
             text {
@@ -289,6 +291,10 @@ body {
         .results__item {
           display: flex;
           justify-content: space-between;
+          padding: 1.5% 0;
+          border: 0.7px $soft-grey;
+          border-style: solid none;
+          height: 30px;
           span {
             a {
               font-family: 'Open Sans';
@@ -307,8 +313,12 @@ body {
               line-height: 20px;
               color: $secondary-text;
             }
+            .results__course-title-wrapper {
+              width: 70%;
+              display: flex;  
+            }
             .results__item-state {
-              width: 14%;
+              width: 106px;
               border: 2px solid #FFFFFF;
               border-radius: 10px;
               font-family: 'Open Sans';
@@ -318,6 +328,20 @@ body {
               line-height: 18px;
               text-align: center;
               color: $main-text;
+              height: 20px;
+              padding: 0.5% 6%;
+            }
+            .results__item-state__voucher {
+              background-color: $blue;
+            }
+            .results__item-state__paid {
+              background-color: $green;
+            }
+            .results__item-state__pending {
+              background-color: $grey;
+            }
+            .results__item-state__rejected {
+              background-color: $red;
             }
           }
         }
